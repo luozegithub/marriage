@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="cn.luoze.UserManage.entity.Care" table="care">
+		<id name="id" type="java.lang.Integer">
+			<column name="id" length="32" />
+			<generator class="increment" />
+		</id>
+		<property name="care_id" type="java.lang.String">
+			<column name="careid" length="32" not-null="true" />
+		</property>
+		<property name="cared_id" type="java.lang.String">
+			<column name="caredid" length="32" not-null="true" />
+		</property>
+	</class>
+
+</hibernate-mapping>
+	

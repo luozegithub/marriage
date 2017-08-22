@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="user-action" namespace="/user" extends="struts-default">
+		<action name="user_*" class="cn.luoze.UserManage.action.UserAction" method="{1}" >
+			<result name="list" type="redirectAction">
+				<param name="actionName">user_listUI</param>
+			</result>
+			<result name="listUI">/WEB-INF/jsp/listUI.jsp</result>
+			<result name="editUI">/WEB-INF/jsp/editUI.jsp</result>
+			<result name="info">/WEB-INF/jsp/info.jsp</result>
+		</action>
+	</package>
+</struts>
